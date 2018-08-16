@@ -1,0 +1,52 @@
+.new-tweet{
+  background-color: #eee;
+  color: #244751;
+  border-radius: 5px;
+  margin: 2em;
+  padding: 10px;
+}
+
+form{
+  padding-bottom: 10px;
+}
+
+.newtweet:after{
+  content: "";
+  clear: both;
+}
+
+.new-tweet h2{
+  width: 80%;
+  margin-bottom: 0px;
+
+}
+
+.new-tweet .hr{
+  content:'';
+  margin-bottom: 10px;
+  width: 100%;
+  border: solid black 1px;
+
+}
+
+.new-tweet .form{
+  width:100%;
+}
+
+.new-tweet textarea{
+  width:100%;
+  padding: 10px;
+}
+
+.new-tweet input{
+  float-left;
+}
+.new-tweet .counter{
+  float: right;
+  text-align: right;
+}
+
+
+
+
+

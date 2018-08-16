@@ -6,28 +6,74 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <!-- Google Font Roboto  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/new-tweet.css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
+  </head>
+  <body>
+    <header>
+    <nav id="nav-bar" class="clearfix">
+      <div class="navbar">
+        <img class="logo" src="/images/bird.png" >
+      </div>
+      <span class="header">Tweeter</span>
+      <div id='compose'>
+        <div id="compButton">
+          <i class="fas fa-edit"></i>
+          <p> Compose</p>
+        </div>
+      </div>
+     </nav>
+    </header>
+    <!-- Page-specific (main) content here -->
+    <main id="container">
+      <!-- new tweet form -->
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <div class="hr"></div>
+        <form method="POST" action="/tweets/" id="new-tweet-submit">
+          <textarea id="tweetBox" name="text" placeholder="What are you humming about?"></textarea>
+          <input id="submitTweet" type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+        <div class="error" id='empty'><p>No text in tweet box please re-enter or edit your tweet</p></div>
+        <div class="error" id='verbose'><p>Your tweet has too many characters please re-enter or edit your tweet</p></div>
+      </section>
+      <section id="tweets-container">
+      <!--   <article class="tweet">
+          <div class="tweet-header clearfix">
+            <img src='images/egg.jpeg' class="profilePic" alt="">
+            <h3> USER NAME</h3>
+            <h4 class="at">@uselessAccount</h4>
+          </div>
+          <artticle class="tweet-text">
+            <p> How much for the horse tornado?
+              Sir, that's a carousel.
+            I must have it.</p>
+          </artticle>
+          <footer class="clearfix">
+            <div class="date">10 days</div>
+            <div class="icons">
+              <a href=""><i class="fas fa-flag"></i></a>
+              <a href=""><i class="fas fa-retweet"></i></a>
+              <a href=""><i class="fas fa-heart"></i></a>
+            </div>
+          </footer>
+        </article> -->
+      </section>
+    </main>
+    <!-- custom Js componenents -->
+    <script src="scripts/composer-char-counter.js"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
-  </head>
-
-  <body>
-
-    <!-- Top nav bar (fixed) -->
-    <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
-      <span class="header">Tweeter</span>
-    </nav>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-    </main>
-
   </body>
 </html>
