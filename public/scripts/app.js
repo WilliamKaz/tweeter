@@ -48,6 +48,9 @@ const data = [
 
 
 var createTweetElement = function (data) {
+  var d = new Date;
+  var m = new Date;
+  var y = new Date;
   const tweetTemplate = `<article class="tweet">
           <div class="tweet-header clearfix">
             <img src="${data.user.avatars.regular}" class="profilePic" alt="">
@@ -58,7 +61,7 @@ var createTweetElement = function (data) {
             <p>${escape(data.content.text)}</p>
           </artticle>
           <footer class="clearfix">
-            <div class="date">10 days</div>
+            <div class="date">${d.getFullYear()}/${m.getMonth()}/${d.getFullYear()}</div>
             <div class="icons">
               <a href=""><i class="fas fa-flag"></i></a>
               <a href=""><i class="fas fa-retweet"></i></a>
@@ -82,8 +85,7 @@ var renderTweets = function(tweets) {
 }
 
 var loadTweets = function(){
-   $.ajax('/tweets', { method: 'GET' })
-    .then(function (tweets) {
+   $.ajax('/tweets', { method: 'GET' }).then(function (tweets) {
       renderTweets(tweets);
     });
 }
